@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: abdelrahman1712/myapp:v0
+        image: abdelrahman1712/myapp:0037546
         ports:
         - containerPort: 8080
         readinessProbe:
