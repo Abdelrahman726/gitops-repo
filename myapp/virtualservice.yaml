@@ -5,9 +5,17 @@ metadata:
 spec:
   hosts: ["*"]
   gateways: [myapp-gw]
+
   http:
   - route:
     - destination:
         host: myapp
         port:
           number: 80
+
+    timeout: 10s
+
+    retries:
+      attempts: 3
+      perTryTimeout: 2s
+      retryOn: 5xx,connect-failure,reset
